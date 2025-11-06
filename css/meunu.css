@@ -1,0 +1,542 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cod-primary: #2d2d2d;   /* Gris principal */
+    --cod-secondary: #ff6b00; /* Naranja COD */
+    --cod-accent: #8b0000;    /* Rojo acento */
+    --cod-background: #1a1a1a; /* Fondo oscuro */
+    --cod-text: #ffffff;      /* Texto blanco */
+    --font-cod-title: 'Orbitron', sans-serif;
+    --font-cod-subtitle: 'Rajdhani', sans-serif;
+    --font-cod-body: 'Rajdhani', sans-serif;
+}
+body{
+    background-color: var(--cod-background);
+}
+html{
+    font-size: 62.5%;
+}
+#menuToggle{
+    display: none;
+}
+.iconMenu{
+    color: var(--cod-secondary);  
+    animation: girar .3s;
+
+}
+.iconMenu2{
+    color: var(--cod-secondary);
+    display: none;
+    animation: girar .3s  ;
+}
+.header{
+    
+    background-color: var(--cod-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 6rem;
+    position: sticky;
+    top: 0;
+    z-index: 222;
+
+}
+
+header .barraNavegacion .menuHamburguesa{
+    position: relative;
+    z-index: 222;
+
+    
+}
+header .barraNavegacion .ul{
+    flex-direction: column;
+    position: absolute;
+    inset: 0;
+    background-color: var(--cod-primary);
+    z-index: 122;
+    display: none;
+    list-style: none;
+    height: calc(100vh - 6rem);
+    margin-top: 6rem;
+    justify-content: center;
+
+}
+
+header > .barraNavegacion > .ul > .li{
+    text-align: center;
+    padding: 2rem;
+    transition: .3s;
+    z-index: 222;
+}
+header .barraNavegacion .ul .li:hover{
+    background-color: var(--cod-background);
+}
+header .barraNavegacion .ul .li .link{
+    text-decoration: none;
+    color: var(--cod-secondary);
+    font-size: 2rem;
+    font-family: var(--font-cod-title);
+    text-transform: uppercase;
+    transition:  .3s;
+    z-index: 222;
+}
+header .barraNavegacion .ul .li .link:hover{
+    color: var(--cod-accent);
+}
+#menuToggle:checked ~ .ul{
+    display: flex;
+}
+#menuToggle:checked ~ .menuHamburguesa .iconMenu{
+    display: none;
+
+}
+#menuToggle:checked ~ .menuHamburguesa .iconMenu2{
+    display: flex;
+    transform: rotate(360deg);
+}
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+img {
+    width: 9rem;
+    z-index: 2;
+}
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+}
+
+img{
+    max-width: 100%
+}
+
+article.card{
+    max-width: 350px;
+    color: #ffffff;
+    border-radius: 8px;
+    margin:  1rem auto;
+    box-shadow:0 0 12px; 
+    z-index: 1;
+    
+}
+.card footer{
+    padding: 0 1rem;
+    z-index: 1;
+}
+
+.copy{
+    text-align: center;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0; 
+    opacity: 0.3;
+    filter: brightness(0.5);
+}
+footer {
+    background: linear-gradient(to right, #0a0a0a, #1a1a1a, #0a0a0a);
+    color: var(--cod-text);
+    padding: 40px 0;
+    border-top: 2px solid var(--cod-secondary);
+    margin-top: 50px;
+    font-family: var(--font-cod-body);
+    z-index: 111;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 30px;
+    z-index: 111;
+
+}
+
+.footerSection {
+    flex: 1;
+    margin-bottom: 30px;
+    z-index: 111;
+
+}
+
+.footerSection h3 {
+    color: var(--cod-secondary);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-family: var(--font-cod-title);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 111;
+
+}
+
+.footerSection h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--cod-secondary);
+    z-index: 1;
+    z-index: 111;
+
+}
+
+.footerSection p {
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    z-index: 111;
+
+}
+
+.footerLinks {
+    list-style: none;
+    padding: 0;
+    z-index: 111;
+
+}
+
+.footerLinks li {
+    margin-bottom: 12px;
+    margin-left: 10px;
+    z-index: 111;
+
+}
+
+.footerLinks a {
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: var(--font-cod-body);
+    z-index: 111;
+
+}
+
+.footerLinks a:hover {
+    color: var(--cod-secondary);
+    transform: translateX(5px);
+    z-index: 111;
+
+}
+
+
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    z-index: 111;
+
+}
+
+.socialLinks a {
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #444;
+    overflow: hidden;
+    z-index: 111;
+
+}
+.socialLinks a img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+
+}
+
+.socialLinks a:hover {
+    background-color: var(--cod-secondary);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 0, 0.3);
+    z-index: 111;
+
+}
+
+.newsletterForm {
+    display: flex;
+    margin-top: 15px;
+    z-index: 111;
+
+}
+
+.newsletterForm input {
+    flex: 1;
+    padding: 12px;
+    background-color: #2d2d2d;
+    border: 1px solid #444;
+    border-right: none;
+    color: var(--cod-text);
+    font-family: var(--font-cod-body);
+    font-size: 1.4rem;
+    z-index: 111;
+
+}
+
+.newsletterForm input:focus {
+    outline: none;
+    border-color: var(--cod-secondary);
+    z-index: 111;
+
+}
+
+.newsletterForm button {
+    background-color: var(--cod-secondary);
+    color: #000;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-cod-title);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    z-index: 111;
+
+}
+
+.newsletterForm button:hover {
+    background-color: #ff8c00;
+    z-index: 111;
+
+}
+
+.footerBottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-top: 1px solid #444;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 111;
+
+}
+
+.footerBottom .copyright p {
+    color: #ccc;
+    font-size: 1.3rem;
+    margin: 0;
+    z-index: 111;
+
+}
+
+.footerLegal {
+    display: flex;
+    gap: 20px;
+    z-index: 111;
+
+}
+
+.footerLegal a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    z-index: 111;
+
+}
+
+.footerLegal a:hover {
+    color: var(--cod-secondary);
+    z-index: 111;
+
+}
+
+
+@media (max-width: 768px) {
+    .footerContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    
+    .footerSection {
+        min-width: 100%;
+    }
+    
+    .footerBottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footerLegal {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footerSection h3 {
+        font-size: 1.6rem;
+    }
+    
+    .footerLinks a,
+    .footerSection p {
+        font-size: 1.3rem;
+    }
+    
+    .socialLinks {
+        justify-content: center;
+    }
+    
+    .newsletterForm {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .newsletterForm input {
+        border-right: 1px solid #444;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ul {
+        flex-direction: column;
+        
+    }
+
+    .link {
+        font-size: 1.5rem;
+    }
+
+    aside {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .video-bg {
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 340px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 0.5rem;
+    }
+    header img {
+        width: 7rem;
+        margin-bottom: 0.5rem;
+    }
+    .link {
+        font-size: 1.2rem;
+    }
+
+    aside {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .card {
+        width: 95%;
+        max-width: none;
+    }
+    .texto-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .video-bg {
+        opacity: 0.2;
+    }
+
+    .copy p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .ul {
+        display: none;
+        flex-direction: row;
+    }
+
+    aside {
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .link {
+        font-size: 1.3rem;
+    } 
+}
+
+@media(min-width:700px){
+    header .barraNavegacion .menuHamburguesa{
+        display: none;
+    }
+    header .barraNavegacion{
+        width: 100%;
+    }
+    header .barraNavegacion .ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: static;
+        align-items: center;
+        height: fit-content;
+        margin: 0;
+    }
+    header .barraNavegacion .ul .li{
+        padding: 1rem;
+       
+    }
+    header .barraNavegacion .ul .li .link{
+        font-size: 1.3rem;
+    }
+
+
+}
