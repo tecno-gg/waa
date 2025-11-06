@@ -35,7 +35,7 @@ html {
 body{
   margin:0;
   font-family: 'Roboto', system-ui, 'Segoe UI', 'Helvetica Neue', Arial;
-  background-color: var(--cod-background);
+  background-color: red;
   color: #e6eef6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
